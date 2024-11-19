@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Journey</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .output {
+            background-color: #eef9f5;
+            padding: 10px;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Developer Journey</h1>
+    <p>Sharing my progress and projects on my way to becoming a <strong>Java Developer</strong>.</p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>Hi, I'm <span class="highlight">Nagarani Seelamneni</span>, an aspiring <strong>Java Developer</strong> with a passion for creating interactive web applications. I'm currently learning web development and backend programming through <span class="highlight">CodeBegun</span> on Day 7 of my journey.</p>
+    <blockquote>"The only way to do great work is to love what you do." - Steve Jobs</blockquote>
+</section>
+
+<section>
+    <h2>Technologies I Use</h2>
+    <ul>
+        <li><strong>HTML:</strong> Building the structure of web pages.</li>
+        <li><strong>CSS:</strong> Styling and creating layouts.</li>
+        <li><strong>JavaScript:</strong> Adding interactivity to web pages.</li>
+        <li><strong>Java:</strong> Developing backend systems.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>My Projects</h2>
+    <ol>
+        <li>
+            <strong>Calculator:</strong> A simple, functional calculator built with <em>HTML</em>, <em>CSS</em>, and <em>JavaScript</em>. 
+            <a href="https://github.com/naga1914/Calculater">View Calculator</a>
+        </li>
+        <li>
+            <strong>Netflix Clone:</strong> A visually appealing frontend replica of Netflix. 
+            <a href="https://github.com/naga1914/Netflix">View Netflix Clone</a>
+        </li>
+    </ol>
+</section>
+
+<section>
+    <h2>HTML Tag Examples and Outputs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+                <th>Example Code</th>
+                <th>Rendered Output</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>&lt;div&gt;</strong></td>
+                <td>Defines a division or section in HTML.</td>
+                <td>
+                    <pre>&lt;div&gt;This is a div.&lt;/div&gt;</pre>
+                </td>
+                <td class="output">
+                    <div>This is a div.</div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>&lt;caption&gt;</strong></td>
+                <td>Specifies a table caption.</td>
+                <td>
+                    <pre>
+&lt;table&gt;
+  &lt;caption&gt;Table Title&lt;/caption&gt;
+  &lt;tr&gt;&lt;td&gt;Content&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+                    </pre>
+                </td>
+                <td class="output">
+                    <table>
+                        <caption>Table Title</caption>
+                        <tr><td>Content</td></tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>&lt;font&gt;</strong></td>
+                <td>Specifies font style, size, or color. (Deprecated)</td>
+                <td>
+                    <pre>&lt;font color=&quot;red&quot;&gt;Red Text&lt;/font&gt;</pre>
+                </td>
+                <td class="output">
+                    <font color="red">Red Text</font>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>&lt;em&gt;</strong></td>
+                <td>Defines emphasized text (italics by default).</td>
+                <td>
+                    <pre>&lt;em&gt;Emphasized text&lt;/em&gt;</pre>
+                </td>
+                <td class="output">
+                    <em>Emphasized text</em>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>&lt;u&gt;</strong></td>
+                <td>Defines underlined text.</td>
+                <td>
+                    <pre>&lt;u&gt;Underlined text&lt;/u&gt;</pre>
+                </td>
+                <td class="output">
+                    <u>Underlined text</u>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>&lt;strike&gt;</strong></td>
+                <td>Specifies strikethrough text. (Deprecated)</td>
+                <td>
+                    <pre>&lt;strike&gt;Strikethrough text&lt;/strike&gt;</pre>
+                </td>
+                <td class="output">
+                    <strike>Strikethrough text</strike>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>&lt;small&gt;</strong></td>
+                <td>Defines smaller text.</td>
+                <td>
+                    <pre>&lt;small&gt;This is small text.&lt;/small&gt;</pre>
+                </td>
+                <td class="output">
+                    <small>This is small text.</small>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>&lt;span&gt;</strong></td>
+                <td>Defines an inline section of content.</td>
+                <td>
+                    <pre>&lt;span&gt;Inline text&lt;/span&gt;</pre>
+                </td>
+                <td class="output">
+                    <span>Inline text</span>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>&lt;sub&gt;</strong></td>
+                <td>Displays text as a subscript.</td>
+                <td>
+                    <pre>H&lt;sub&gt;2&lt;/sub&gt;O</pre>
+                </td>
+                <td class="output">
+                    H<sub>2</sub>O
+                </td>
+            </tr>
+            <tr>
+                <td><strong>&lt;sup&gt;</strong></td>
+                <td>Displays text as a superscript.</td>
+                <td>
+                    <pre>x&lt;sup&gt;2&lt;/sup&gt;</pre>
+                </td>
+                <td class="output">
+                    x<sup>2</sup>
+                </td>
+            </tr>
+        </tbody>
+            <tbody>
+                <tr>
+                    <td><strong>&lt;h1&gt;-&lt;h6&gt;</strong></td>
+                    <td>Defines headings, with <code>&lt;h1&gt;</code> being the largest and <code>&lt;h6&gt;</code> the smallest.</td>
+                    <td>
+                        <pre>
+    &lt;h1&gt;Heading 1&lt;/h1&gt;
+    &lt;h3&gt;Heading 3&lt;/h3&gt;
+    &lt;h6&gt;Heading 6&lt;/h6&gt;
+                        </pre>
+                    </td>
+                    <td class="output">
+                        <h1>Heading 1</h1>
+                        <h3>Heading 3</h3>
+                        <h6>Heading 6</h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;p&gt;</strong></td>
+                    <td>Defines a paragraph.</td>
+                    <td>
+                        <pre>&lt;p&gt;This is a paragraph.&lt;/p&gt;</pre>
+                    </td>
+                    <td class="output">
+                        <p>This is a paragraph.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;br&gt;</strong></td>
+                    <td>Inserts a line break.</td>
+                    <td>
+                        <pre>Line 1&lt;br&gt;Line 2</pre>
+                    </td>
+                    <td class="output">
+                        Line 1<br>Line 2
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;ol&gt; and &lt;li&gt;</strong></td>
+                    <td>Creates an ordered list with list items.</td>
+                    <td>
+                        <pre>
+    &lt;ol&gt;
+      &lt;li&gt;First item&lt;/li&gt;
+      &lt;li&gt;Second item&lt;/li&gt;
+    &lt;/ol&gt;
+                        </pre>
+                    </td>
+                    <td class="output">
+                        <ol>
+                            <li>First item</li>
+                            <li>Second item</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;img&gt;</strong></td>
+                    <td>Displays an image.</td>
+                    <td>
+                        <pre>
+    &lt;img src="image.jpg" alt="Example Image"&gt;
+                        </pre>
+                    </td>
+                    <td class="output">
+                        <img src="data:image/png;base64,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" alt="Example Image">
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;section&gt;</strong></td>
+                    <td>Defines a section of a webpage.</td>
+                    <td>
+                        <pre>&lt;section&gt;This is a section.&lt;/section&gt;</pre>
+                    </td>
+                    <td class="output">
+                        <section>This is a section.</section>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;strong&gt;</strong></td>
+                    <td>Defines important or bold text.</td>
+                    <td>
+                        <pre>&lt;strong&gt;Bold Text&lt;/strong&gt;</pre>
+                    </td>
+                    <td class="output">
+                        <strong>Bold Text</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;u&gt;</strong></td>
+                    <td>Underlines text.</td>
+                    <td>
+                        <pre>&lt;u&gt;Underlined Text&lt;/u&gt;</pre>
+                    </td>
+                    <td class="output">
+                        <u>Underlined Text</u>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>&lt;table&gt; with &lt;thead&gt;, &lt;tbody&gt;, &lt;tr&gt;, &lt;th&gt;</strong></td>
+                    <td>Creates a table with headers and body.</td>
+                    <td>
+                        <pre>
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+                        </pre>
+                    </td>
+                    <td class="output">
+                        <table>
+                            <thead>
+                                <tr><th>Header</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Data</td></tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+<footer>
+    <p>&copy; 2024 Nagarani. Follow me on:</p>
+    <p>
+        <a href="https://github.com/naga1914" target="_blank">GitHub</a> | 
+        <a href="https://www.linkedin.com/in/nagarani1914" target="_blank">LinkedIn</a>
+    </p>
+</footer>
+
+</body>
+</html>
