@@ -5,70 +5,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Developer Journey</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #333333;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1, #fad0c4, #ff9a9e);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            color: #ffffff;
         }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Loading Animation */
+        #loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+
+        .spinner {
+            width: 80px;
+            height: 80px;
+            border: 8px solid rgba(255, 255, 255, 0.3);
+            border-top: 8px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Header Styles */
         header {
-            background-color: #4CAF50;
-            color: white;
+            background: rgba(0, 0, 0, 0.7);
             padding: 20px;
             text-align: center;
+            border-bottom: 2px solid #ffffff;
         }
+
+        header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin: 0;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb, #ff9a9e);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        /* Section Styles */
         section {
-            padding: 20px;
-            margin: 20px;
-            background: #f9f9f9;
+            margin: 20px auto;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.5);
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ffd700;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        ul li, ol li {
+            margin: 5px 0;
+        }
+
+        pre {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        /* Table Styles */
         table {
             width: 100%;
-            margin: 20px 0;
+            margin-top: 10px;
             border-collapse: collapse;
+            color: #ffffff;
         }
+
         th, td {
             padding: 10px;
             text-align: left;
-            border: 1px solid #ddd;
+            border: 1px solid #ffffff;
         }
+
         th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        .output {
-            background-color: #eef9f5;
-            padding: 10px;
-            border: 1px solid #4CAF50;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        footer {
             background-color: #333;
-            text-align: center;
-            padding: 10px;
-            color: white;
+            font-weight: bold;
         }
-        a {
-            color: #4CAF50;
+
+        tr:nth-child(even) {
+            background-color: #444;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 15px;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        footer a {
+            color: #ffd700;
             text-decoration: none;
         }
-        a:hover {
+
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
+    <script>
+        // Loading Animation Script
+        document.addEventListener("DOMContentLoaded", function () {
+            const loadingScreen = document.getElementById("loading");
+            setTimeout(() => {
+                loadingScreen.style.display = "none";
+            }, 3000);
+        });
+    </script>
 </head>
 <body>
+
+<!-- Loading Animation -->
+<div id="loading">
+    <div class="spinner"></div>
+</div>
 
 <header>
     <h1>Welcome to My Developer Journey</h1>
@@ -83,13 +176,35 @@
 
 <section>
     <h2>Technologies I Use</h2>
-    <ul>
-        <li><strong>HTML:</strong> Building the structure of web pages.</li>
-        <li><strong>CSS:</strong> Styling and creating layouts.</li>
-        <li><strong>JavaScript:</strong> Adding interactivity to web pages.</li>
-        <li><strong>Java:</strong> Developing backend systems.</li>
-    </ul>
+    <!-- Table of technologies -->
+    <table>
+        <thead>
+            <tr>
+                <th>Technology</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>Hypertext Markup Language used for creating the structure of web pages.</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Cascading Style Sheets used to style the visual presentation of web pages.</td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td>A programming language used to create dynamic content on web pages.</td>
+            </tr>
+            <tr>
+                <td>Java</td>
+                <td>A versatile programming language used for backend development and application programming.</td>
+            </tr>
+        </tbody>
+    </table>
 </section>
+
 
 <section>
     <h2>My Projects</h2>
@@ -233,14 +348,21 @@
                     <td>
                         <pre>
     &lt;h1&gt;Heading 1&lt;/h1&gt;
+    &lt;h2&gt;Heading 2&lt;/h2&gt;
     &lt;h3&gt;Heading 3&lt;/h3&gt;
+    &lt;h4&gt;Heading 4&lt;/h4&gt;
+    &lt;h5&gt;Heading 5&lt;/h5&gt;
     &lt;h6&gt;Heading 6&lt;/h6&gt;
                         </pre>
                     </td>
                     <td class="output">
                         <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
                         <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
                         <h6>Heading 6</h6>
+
                     </td>
                 </tr>
                 <tr>
